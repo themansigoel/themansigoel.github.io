@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
+    <loc>https://themansigoel.github.io/grow-focus-web/sitemap.xml</loc>
+    <lastmod>2026-09-02</lastmod>
+  </sitemap>
+  <sitemap>
     <loc>https://themansigoel.github.io/stepaway/sitemap.xml</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://themansigoel.github.io/mantra-chanting-web/sitemap.xml</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://themansigoel.github.io/go-phonics/sitemap.xml</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://themansigoel.github.io/kiddo-puzzle/sitemap.xml</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </sitemap>
 </sitemapindex>
