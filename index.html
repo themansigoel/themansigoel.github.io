@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="themansigoel@gmail.com">
     <title>Sunshine Studios — Crafted Native Apple Experiences</title>
-    <meta name="description" content="Sunshine Studios designs award-winning, privacy-first iOS, watchOS, and macOS apps for deep focus, mindfulness, healthy work habits, and early childhood learning.">
+    <meta name="description" content="Sunshine Studios by Mansi Agarwal creates human-centered, privacy-first native iOS, watchOS, and macOS apps for cognitive focus, mindfulness, and early learning.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://themansigoel.github.io/">
 
@@ -14,7 +15,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -24,6 +25,12 @@
       "name": "Sunshine Studios",
       "url": "https://themansigoel.github.io/",
       "logo": "https://themansigoel.github.io/assets/growfocus_icon.png",
+      "email": "themansigoel@gmail.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Mansi Agarwal",
+        "email": "themansigoel@gmail.com"
+      },
       "description": "Sunshine Studios creates human-centered, privacy-first native applications for the Apple ecosystem.",
       "sameAs": [
         "https://apps.apple.com/us/developer/mansi-agarwal/id1797279797"
@@ -33,13 +40,15 @@
 
     <style>
         :root {
-            --bg-base: #07080B;
+            --bg-base: #06070A;
             --bg-card: rgba(18, 22, 34, 0.65);
             --border-glass: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(255, 255, 255, 0.22);
+            --border-hover: rgba(255, 255, 255, 0.24);
             --text-primary: #F8FAFC;
             --text-secondary: #94A3B8;
             --text-muted: #64748B;
+            --sunshine-gold: #FBBF24;
+            --sunshine-glow: rgba(251, 191, 36, 0.25);
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -63,35 +72,35 @@
         }
 
         /* Ambient Dynamic Glow Orbs */
-        .ambient-glow-1 {
+        .ambient-glow-sun {
             position: fixed;
-            top: -150px;
-            left: 20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+            top: -180px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 750px;
+            height: 500px;
+            background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.18) 0%, rgba(16, 185, 129, 0.10) 45%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: 0;
-            animation: floatGlow 14s ease-in-out infinite alternate;
+            animation: pulseSun 10s ease-in-out infinite alternate;
         }
 
-        .ambient-glow-2 {
+        .ambient-glow-side {
             position: fixed;
             bottom: -200px;
-            right: 15%;
+            right: 10%;
             width: 700px;
             height: 700px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.10) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: 0;
-            animation: floatGlow 18s ease-in-out infinite alternate-reverse;
         }
 
-        @keyframes floatGlow {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(40px, 60px) scale(1.15); }
+        @keyframes pulseSun {
+            0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+            100% { transform: translateX(-50%) scale(1.18); opacity: 1; }
         }
 
         .container {
@@ -104,59 +113,73 @@
 
         /* Hero Section */
         .hero {
-            padding: 100px 0 60px 0;
+            padding: 90px 0 50px 0;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .studio-pill {
+        /* Prominent Sunshine Studios Branding Header */
+        .brand-header-badge {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-glass);
+            gap: 12px;
+            padding: 10px 24px;
+            background: rgba(251, 191, 36, 0.08);
+            border: 1px solid rgba(251, 191, 36, 0.3);
             border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: #E2E8F0;
-            margin-bottom: 24px;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 28px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.15);
             animation: fadeInDown 0.8s var(--ease-out-expo);
         }
 
-        .studio-pill .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #10B981;
-            box-shadow: 0 0 10px #10B981;
-            animation: pulseDot 2s infinite;
+        .sun-emblem {
+            font-size: 1.25rem;
+            animation: rotateSun 20s linear infinite;
+            display: inline-block;
         }
 
-        @keyframes pulseDot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(0.85); }
+        @keyframes rotateSun {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .brand-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .brand-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            color: #FDE68A;
+            text-transform: uppercase;
+        }
+
+        .brand-author {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            font-weight: 500;
         }
 
         .hero-title {
-            font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+            font-size: clamp(2.6rem, 5.8vw, 4.4rem);
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -0.03em;
             margin-bottom: 20px;
-            max-width: 860px;
+            max-width: 900px;
             animation: fadeInUp 0.9s var(--ease-out-expo);
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #FFFFFF 20%, #34D399 60%, #38BDF8 100%);
+        .gradient-text-sun {
+            background: linear-gradient(135deg, #FFFFFF 20%, #FBBF24 55%, #34D399 90%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -164,14 +187,14 @@
         .hero-subtitle {
             font-size: clamp(1.05rem, 1.8vw, 1.25rem);
             color: var(--text-secondary);
-            max-width: 680px;
+            max-width: 720px;
             line-height: 1.6;
             margin-bottom: 50px;
             font-weight: 400;
             animation: fadeInUp 1s var(--ease-out-expo);
         }
 
-        /* App Portfolio Grid */
+        /* Portfolio Bento Grid */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -179,7 +202,6 @@
             margin-bottom: 80px;
         }
 
-        /* Banners / Cards */
         .app-card {
             background: var(--bg-card);
             border: 1px solid var(--border-glass);
@@ -203,7 +225,6 @@
             box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
         }
 
-        /* Card Sizes */
         .card-featured {
             grid-column: span 12;
             background: linear-gradient(145deg, rgba(20, 36, 32, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%);
@@ -221,7 +242,6 @@
             min-height: 260px;
         }
 
-        /* Card Content Elements */
         .card-top {
             display: flex;
             align-items: flex-start;
@@ -296,14 +316,14 @@
             font-weight: 500;
         }
 
-        /* Specific Brand Accents */
+        /* Color Accents */
         .accent-green { color: #34D399; }
         .accent-gold { color: #F59E0B; }
         .accent-blue { color: #38BDF8; }
         .accent-purple { color: #A78BFA; }
         .accent-rose { color: #FB7185; }
 
-        /* Keyframe Animations */
+        /* Animations */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -317,12 +337,31 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 40px 24px;
+            padding: 48px 24px;
             color: var(--text-muted);
             font-size: 0.9rem;
             border-top: 1px solid var(--border-glass);
             width: 100%;
             margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-author {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .footer-author a {
+            color: #FBBF24;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-author a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 900px) {
@@ -332,22 +371,25 @@
     </style>
 </head>
 <body>
-    <div class="ambient-glow-1"></div>
-    <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-sun"></div>
+    <div class="ambient-glow-side"></div>
 
     <main class="container">
-        <!-- Hero Section -->
+        <!-- Hero Section with Prominent Sunshine Studios Emblem -->
         <section class="hero">
-            <div class="studio-pill">
-                <span class="dot"></span>
-                <span>Sunshine Studios Ecosystem</span>
+            <div class="brand-header-badge">
+                <span class="sun-emblem">☀️</span>
+                <div class="brand-text-wrapper">
+                    <span class="brand-title">Sunshine Studios</span>
+                    <span class="brand-author">Crafted by Mansi Agarwal &bull; <a href="mailto:themansigoel@gmail.com" style="color: inherit; text-decoration: none;">themansigoel@gmail.com</a></span>
+                </div>
             </div>
             <h1 class="hero-title">
                 Human-Centered Software <br />
-                <span class="gradient-text">Engineered with Purpose.</span>
+                <span class="gradient-text-sun">Engineered with Purpose.</span>
             </h1>
             <p class="hero-subtitle">
-                100% ad-free, privacy-first native Apple experiences designed for cognitive focus, spiritual mindfulness, desktop health, and early literacy.
+                100% ad-free, privacy-first native Apple experiences designed for cognitive focus, spiritual mindfulness, desktop posture, and early literacy.
             </p>
         </section>
 
@@ -458,7 +500,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Sunshine Studios (Mansi Agarwal). All rights reserved. Apple, iPhone, Apple Watch, iPad, and macOS are trademarks of Apple Inc.</p>
+        <p class="footer-author">Published by <strong>Sunshine Studios</strong> &bull; Lead Developer: <a href="mailto:themansigoel@gmail.com">Mansi Agarwal (themansigoel@gmail.com)</a></p>
+        <p>&copy; 2026 Sunshine Studios. All rights reserved. Apple, iPhone, Apple Watch, iPad, and macOS are trademarks of Apple Inc.</p>
     </footer>
 </body>
 </html>
