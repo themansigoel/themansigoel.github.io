@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,61 +51,27 @@
 
     <style>
         :root {
-            --bg-base: #0A0D14;
-            --bg-surface: #0E121D;
-            --bg-card: rgba(18, 23, 36, 0.76);
-            --bg-card-hover: rgba(24, 31, 48, 0.88);
-            --border-glass: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(255, 255, 255, 0.22);
-            --text-primary: #F8FAFC;
-            --text-secondary: #94A3B8;
-            --text-muted: #64748B;
-            --sunshine-gold: #FBBF24;
-            --sunshine-glow: rgba(251, 191, 36, 0.22);
-            --accent-green: #34D399;
-            --accent-blue: #38BDF8;
-            --accent-purple: #A78BFA;
-            --accent-rose: #FB7185;
-            --accent-cyan: #22D3EE;
-            --card-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.5);
-            --card-shadow-hover: 0 28px 56px -12px rgba(0, 0, 0, 0.7);
-            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-            --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
-            --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        [data-theme="light"] {
             --bg-base: #F8FAFC;
             --bg-surface: #F1F5F9;
             --bg-card: #FFFFFF;
             --bg-card-hover: #FFFFFF;
             --border-glass: rgba(15, 23, 42, 0.08);
-            --border-hover: rgba(15, 23, 42, 0.18);
+            --border-hover: rgba(15, 23, 42, 0.20);
             --text-primary: #0F172A;
             --text-secondary: #475569;
             --text-muted: #94A3B8;
             --sunshine-gold: #D97706;
             --sunshine-glow: rgba(245, 158, 11, 0.12);
-            --card-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06);
-            --card-shadow-hover: 0 20px 40px -8px rgba(15, 23, 42, 0.12);
-        }
-
-        @media (prefers-color-scheme: light) {
-            :root:not([data-theme="dark"]) {
-                --bg-base: #F8FAFC;
-                --bg-surface: #F1F5F9;
-                --bg-card: #FFFFFF;
-                --bg-card-hover: #FFFFFF;
-                --border-glass: rgba(15, 23, 42, 0.08);
-                --border-hover: rgba(15, 23, 42, 0.18);
-                --text-primary: #0F172A;
-                --text-secondary: #475569;
-                --text-muted: #94A3B8;
-                --sunshine-gold: #D97706;
-                --sunshine-glow: rgba(245, 158, 11, 0.12);
-                --card-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06);
-                --card-shadow-hover: 0 20px 40px -8px rgba(15, 23, 42, 0.12);
-            }
+            --accent-green: #059669;
+            --accent-blue: #0284C7;
+            --accent-purple: #7C3AED;
+            --accent-rose: #E11D48;
+            --accent-amber: #D97706;
+            --card-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.05), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+            --card-shadow-hover: 0 24px 48px -8px rgba(15, 23, 42, 0.11), 0 8px 16px -4px rgba(15, 23, 42, 0.05);
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         * {
@@ -125,18 +91,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Ambient Dynamic Glow Orbs */
+        /* Ambient Apple Glow Accents (Clean Warm Light) */
         .ambient-glow-sun {
             position: fixed;
-            top: -220px;
+            top: -240px;
             left: 50%;
             transform: translateX(-50%);
-            width: 850px;
+            width: 900px;
             height: 550px;
-            background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.18) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 75%);
+            background: radial-gradient(ellipse at center, rgba(251, 191, 36, 0.20) 0%, rgba(52, 211, 153, 0.10) 45%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: 0;
@@ -145,22 +110,22 @@
 
         .ambient-glow-side {
             position: fixed;
-            bottom: -220px;
-            right: 8%;
+            bottom: -240px;
+            right: 5%;
             width: 750px;
             height: 750px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.10) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(147, 197, 253, 0.15) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: 0;
         }
 
         @keyframes pulseSun {
-            0% { transform: translateX(-50%) scale(1); opacity: 0.75; }
-            100% { transform: translateX(-50%) scale(1.22); opacity: 1; }
+            0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+            100% { transform: translateX(-50%) scale(1.18); opacity: 1; }
         }
 
-        /* Top Floating Navigation Bar */
+        /* Top Sticky Floating Apple Glass Navbar */
         .top-navbar {
             width: 100%;
             position: sticky;
@@ -168,13 +133,8 @@
             z-index: 100;
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            background: rgba(10, 13, 20, 0.65);
+            background: rgba(248, 250, 252, 0.86);
             border-bottom: 1px solid var(--border-glass);
-            transition: background 0.3s ease, border-color 0.3s ease;
-        }
-
-        [data-theme="light"] .top-navbar {
-            background: rgba(248, 250, 252, 0.85);
         }
 
         .navbar-content {
@@ -195,14 +155,19 @@
         }
 
         .nav-logo-icon {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             animation: rotateSun 24s linear infinite;
             display: inline-block;
         }
 
+        @keyframes rotateSun {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
         .nav-brand-title {
             font-family: var(--font-heading);
-            font-size: 1.15rem;
+            font-size: 1.18rem;
             font-weight: 800;
             letter-spacing: -0.01em;
             color: var(--text-primary);
@@ -211,54 +176,29 @@
         .nav-actions {
             display: flex;
             align-items: center;
-            gap: 16px;
-        }
-
-        .theme-toggle-btn {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
-            color: var(--text-secondary);
-            border-radius: 9999px;
-            width: 38px;
-            height: 38px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.2s ease;
-        }
-
-        .theme-toggle-btn:hover {
-            border-color: var(--border-hover);
-            color: var(--text-primary);
-            transform: scale(1.05);
+            gap: 14px;
         }
 
         .developer-badge-link {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            padding: 6px 14px;
+            padding: 7px 16px;
             border-radius: 9999px;
-            background: rgba(251, 191, 36, 0.12);
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            color: #FDE68A;
-            font-size: 0.8rem;
+            background: #FFFFFF;
+            border: 1px solid rgba(217, 119, 6, 0.35);
+            color: #B45309;
+            font-size: 0.82rem;
             font-weight: 700;
             text-decoration: none;
-            transition: all 0.2s ease;
-        }
-
-        [data-theme="light"] .developer-badge-link {
-            color: #B45309;
-            background: rgba(245, 158, 11, 0.10);
-            border-color: rgba(245, 158, 11, 0.35);
+            box-shadow: 0 2px 8px rgba(217, 119, 6, 0.08);
+            transition: all 0.25s ease;
         }
 
         .developer-badge-link:hover {
             transform: translateY(-1px);
-            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+            border-color: #B45309;
+            box-shadow: 0 4px 14px rgba(217, 119, 6, 0.18);
         }
 
         .container {
@@ -283,30 +223,18 @@
             align-items: center;
             gap: 12px;
             padding: 10px 24px;
-            background: rgba(251, 191, 36, 0.08);
-            border: 1px solid rgba(251, 191, 36, 0.3);
+            background: #FFFFFF;
+            border: 1px solid rgba(245, 158, 11, 0.35);
             border-radius: 9999px;
             margin-bottom: 24px;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.12);
+            box-shadow: 0 4px 18px rgba(245, 158, 11, 0.10);
             animation: fadeInDown 0.8s var(--ease-out-expo);
-        }
-
-        [data-theme="light"] .brand-header-badge {
-            background: rgba(245, 158, 11, 0.08);
-            border-color: rgba(245, 158, 11, 0.35);
         }
 
         .sun-emblem {
             font-size: 1.25rem;
             animation: rotateSun 24s linear infinite;
             display: inline-block;
-        }
-
-        @keyframes rotateSun {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
         }
 
         .brand-text-wrapper {
@@ -320,12 +248,8 @@
             font-size: 1.05rem;
             font-weight: 800;
             letter-spacing: 0.04em;
-            color: #FDE68A;
-            text-transform: uppercase;
-        }
-
-        [data-theme="light"] .brand-title {
             color: #B45309;
+            text-transform: uppercase;
         }
 
         .brand-author {
@@ -342,20 +266,11 @@
             letter-spacing: -0.035em;
             margin-bottom: 20px;
             max-width: 920px;
+            color: #0F172A;
             animation: fadeInUp 0.9s var(--ease-out-expo);
         }
 
         .gradient-text-sun {
-            background: linear-gradient(135deg, #FFFFFF 20%, #FBBF24 55%, #34D399 90%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        [data-theme="light"] .hero-title {
-            color: #0F172A;
-        }
-
-        [data-theme="light"] .gradient-text-sun {
             background: linear-gradient(135deg, #0F172A 15%, #D97706 65%, #059669 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -376,8 +291,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 16px;
-            margin-bottom: 48px;
+            gap: 14px;
+            margin-bottom: 44px;
             animation: fadeInUp 1.1s var(--ease-out-expo);
         }
 
@@ -385,21 +300,14 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.03);
+            padding: 8px 18px;
+            background: #FFFFFF;
             border: 1px solid var(--border-glass);
             border-radius: 9999px;
             font-size: 0.82rem;
             color: var(--text-secondary);
             font-weight: 600;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
-        [data-theme="light"] .ribbon-pill {
-            background: #FFFFFF;
-            border-color: rgba(15, 23, 42, 0.08);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
         }
 
         .ribbon-pill span.icon {
@@ -411,13 +319,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             margin-bottom: 40px;
             flex-wrap: wrap;
         }
 
         .filter-btn {
-            background: rgba(255, 255, 255, 0.04);
+            background: #FFFFFF;
             border: 1px solid var(--border-glass);
             color: var(--text-secondary);
             font-family: var(--font-main);
@@ -426,15 +334,11 @@
             padding: 8px 18px;
             border-radius: 9999px;
             cursor: pointer;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
             transition: all 0.25s ease;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-        }
-
-        [data-theme="light"] .filter-btn {
-            background: #FFFFFF;
-            border-color: rgba(15, 23, 42, 0.1);
         }
 
         .filter-btn:hover {
@@ -444,20 +348,16 @@
         }
 
         .filter-btn.active {
-            background: var(--text-primary);
-            color: var(--bg-base);
-            border-color: var(--text-primary);
-            font-weight: 700;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        [data-theme="light"] .filter-btn.active {
             background: #0F172A;
             color: #F8FAFC;
+            border-color: #0F172A;
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.15);
         }
 
         .filter-count {
-            background: rgba(255, 255, 255, 0.12);
+            background: #F1F5F9;
+            color: var(--text-secondary);
             padding: 2px 7px;
             border-radius: 9999px;
             font-size: 0.72rem;
@@ -465,11 +365,8 @@
         }
 
         .filter-btn.active .filter-count {
-            background: rgba(0, 0, 0, 0.18);
-        }
-
-        [data-theme="light"] .filter-btn.active .filter-count {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.22);
+            color: #FFFFFF;
         }
 
         /* Category Headers */
@@ -479,7 +376,6 @@
             gap: 14px;
             margin-bottom: 24px;
             margin-top: 16px;
-            transition: opacity 0.3s ease;
         }
 
         .category-badge {
@@ -490,15 +386,11 @@
             padding: 6px 14px;
             border-radius: 9999px;
             border: 1px solid var(--border-glass);
-            background: rgba(255, 255, 255, 0.04);
+            background: #FFFFFF;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
             display: inline-flex;
             align-items: center;
             gap: 8px;
-        }
-
-        [data-theme="light"] .category-badge {
-            background: rgba(0, 0, 0, 0.04);
-            border-color: rgba(0, 0, 0, 0.08);
         }
 
         .category-title {
@@ -512,11 +404,7 @@
         .category-divider {
             flex-grow: 1;
             height: 1px;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent);
-        }
-
-        [data-theme="light"] .category-divider {
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), transparent);
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.1), transparent);
         }
 
         /* Portfolio Bento Grid */
@@ -536,53 +424,29 @@
             color: inherit;
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
             box-shadow: var(--card-shadow);
-            transition: transform 0.4s var(--ease-out-expo), border-color 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), background-color 0.3s ease;
+            transition: transform 0.4s var(--ease-out-expo), border-color 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         .app-card:hover {
-            transform: translateY(-8px) scale(1.01);
+            transform: translateY(-6px) scale(1.008);
             border-color: var(--border-hover);
             box-shadow: var(--card-shadow-hover);
-            background: var(--bg-card-hover);
-        }
-
-        /* Ambient Card Corner Light */
-        .app-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-            opacity: 0.6;
-        }
-
-        [data-theme="light"] .app-card::before {
-            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
         }
 
         .card-featured {
             grid-column: span 12;
-            background: linear-gradient(145deg, rgba(20, 36, 32, 0.72) 0%, rgba(15, 23, 42, 0.65) 100%);
-            border-color: rgba(52, 211, 153, 0.25);
+            background: linear-gradient(145deg, #ECFDF5 0%, #FFFFFF 100%);
+            border-color: rgba(16, 185, 129, 0.3);
             min-height: 290px;
         }
 
-        [data-theme="light"] .card-featured {
-            background: linear-gradient(145deg, #ECFDF5 0%, #FFFFFF 100%);
-            border-color: rgba(16, 185, 129, 0.3);
-        }
-
         .card-featured:hover {
-            border-color: rgba(52, 211, 153, 0.55);
-            box-shadow: 0 26px 64px -12px rgba(16, 185, 129, 0.25);
+            border-color: rgba(16, 185, 129, 0.55);
+            box-shadow: 0 24px 50px -10px rgba(16, 185, 129, 0.18);
         }
 
         .card-half {
@@ -601,15 +465,10 @@
             width: 72px;
             height: 72px;
             border-radius: 18px;
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-            border: 1px solid rgba(255, 255, 255, 0.14);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(15, 23, 42, 0.08);
             transition: transform 0.4s var(--ease-out-expo);
             flex-shrink: 0;
-        }
-
-        [data-theme="light"] .app-icon {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-            border-color: rgba(0, 0, 0, 0.08);
         }
 
         .app-card:hover .app-icon {
@@ -638,13 +497,10 @@
             letter-spacing: 0.08em;
             padding: 4px 10px;
             border-radius: 6px;
-            background: rgba(255, 255, 255, 0.06);
+            background: #F1F5F9;
+            color: var(--text-secondary);
             display: inline-block;
             width: fit-content;
-        }
-
-        [data-theme="light"] .app-platform-badge {
-            background: rgba(0, 0, 0, 0.05);
         }
 
         .card-desc {
@@ -667,14 +523,8 @@
             font-weight: 600;
             padding: 4px 10px;
             border-radius: 8px;
-            background: rgba(255, 255, 255, 0.04);
+            background: #F8FAFC;
             border: 1px solid var(--border-glass);
-            color: var(--text-secondary);
-        }
-
-        [data-theme="light"] .feature-tag {
-            background: #F1F5F9;
-            border-color: rgba(15, 23, 42, 0.06);
             color: #475569;
         }
 
@@ -713,26 +563,20 @@
             height: 7px;
             border-radius: 50%;
             background: #10B981;
-            box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+            box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
         }
 
         .status-dot.pre-release {
             background: #F59E0B;
-            box-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
+            box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
         }
 
         /* Color Accents */
-        .accent-green { color: #34D399; }
-        .accent-gold { color: #F59E0B; }
-        .accent-blue { color: #38BDF8; }
-        .accent-purple { color: #A78BFA; }
-        .accent-rose { color: #FB7185; }
-
-        [data-theme="light"] .accent-green { color: #059669; }
-        [data-theme="light"] .accent-gold { color: #D97706; }
-        [data-theme="light"] .accent-blue { color: #0284C7; }
-        [data-theme="light"] .accent-purple { color: #7C3AED; }
-        [data-theme="light"] .accent-rose { color: #E11D48; }
+        .accent-green { color: #059669; }
+        .accent-gold { color: #D97706; }
+        .accent-blue { color: #0284C7; }
+        .accent-purple { color: #7C3AED; }
+        .accent-rose { color: #E11D48; }
 
         /* Principles Bento Section */
         .principles-section {
@@ -752,8 +596,6 @@
             border: 1px solid var(--border-glass);
             border-radius: 22px;
             padding: 28px 24px;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             box-shadow: var(--card-shadow);
         }
 
@@ -801,11 +643,7 @@
             flex-direction: column;
             align-items: center;
             gap: 12px;
-            background: rgba(10, 13, 20, 0.4);
-        }
-
-        [data-theme="light"] footer {
-            background: rgba(248, 250, 252, 0.6);
+            background: #F1F5F9;
         }
 
         .footer-author {
@@ -862,9 +700,6 @@
                 <a href="https://apps.apple.com/developer/mansi-agarwal/id1797279797" target="_blank" rel="noopener noreferrer" class="developer-badge-link">
                     <span>App Store Developer Page</span> &rarr;
                 </a>
-                <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Light / Dark Mode" title="Toggle Light / Dark Mode">
-                    <span id="themeIcon">☀️</span>
-                </button>
             </div>
         </div>
     </header>
@@ -1172,35 +1007,8 @@
         <p style="margin-top: 6px; font-size: 0.8rem; color: var(--text-muted);">&copy; 2026 Sunshine Studios. All rights reserved. Apple, iPhone, Apple Watch, iPad, and macOS are trademarks of Apple Inc.</p>
     </footer>
 
-    <!-- Interactive Filtering & Theme Switching Script -->
+    <!-- Interactive Filtering Script (Pure Light Mode) -->
     <script>
-        // 1. Theme Toggle Logic
-        const themeToggleBtn = document.getElementById('themeToggleBtn');
-        const themeIcon = document.getElementById('themeIcon');
-        const htmlElement = document.documentElement;
-
-        // Check local storage or system preference
-        const savedTheme = localStorage.getItem('sunshine_theme');
-        if (savedTheme) {
-            htmlElement.setAttribute('data-theme', savedTheme);
-            themeIcon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
-        } else {
-            const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-            if (systemPrefersLight) {
-                htmlElement.setAttribute('data-theme', 'light');
-                themeIcon.textContent = '🌙';
-            }
-        }
-
-        themeToggleBtn.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('sunshine_theme', newTheme);
-            themeIcon.textContent = newTheme === 'light' ? '🌙' : '☀️';
-        });
-
-        // 2. Category Filter Logic
         const filterButtons = document.querySelectorAll('.filter-btn');
         const categoryBlocks = document.querySelectorAll('.category-block');
 
