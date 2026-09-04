@@ -194,12 +194,49 @@
             animation: fadeInUp 1s var(--ease-out-expo);
         }
 
+        /* Category Headers */
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            margin-top: 16px;
+        }
+
+        .category-badge {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border-glass);
+            background: rgba(255, 255, 255, 0.04);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .category-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .category-divider {
+            flex-grow: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent);
+        }
+
         /* Portfolio Bento Grid */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: 24px;
-            margin-bottom: 80px;
+            margin-bottom: 48px;
         }
 
         .app-card {
@@ -393,50 +430,14 @@
             </p>
         </section>
 
-        <!-- Bento Portfolio Grid -->
+        <!-- 1. macOS Category -->
+        <div class="category-header">
+            <span class="category-badge accent-blue">🖥️ macOS Native</span>
+            <h2 class="category-title">Desktop & Ergonomics</h2>
+            <div class="category-divider"></div>
+        </div>
         <section class="portfolio-grid">
-            
-            <!-- 1. Featured Flagship: GrowFocus -->
-            <a class="app-card card-featured" href="https://themansigoel.github.io/grow-focus-web/">
-                <div>
-                    <div class="card-top">
-                        <img src="assets/growfocus_icon.png" alt="Focus Timer: GrowFocus App Icon" class="app-icon" />
-                        <div>
-                            <h2 class="app-meta-title">Focus Timer: GrowFocus</h2>
-                            <span class="app-platform-badge accent-green">iOS 17+ · Apple Health · SwiftData</span>
-                        </div>
-                    </div>
-                    <p class="card-desc">
-                        Gamified 3D botanical sanctuary and cognitive focus gym for deep work and ADHD brains. Features 10 clinical attention game rooms, anti-wilt Pomodoro stakes, and native Apple Health Mindful Sessions logging.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <span class="view-label accent-green">Explore Experience <span>&rarr;</span></span>
-                    <span class="rating-indicator">⭐️⭐️⭐️⭐️⭐️ 5.0 Rating</span>
-                </div>
-            </a>
-
-            <!-- 2. Mantra Chanting: Japa Mala -->
-            <a class="app-card card-half" href="https://themansigoel.github.io/mantra-chanting-web/">
-                <div>
-                    <div class="card-top">
-                        <img src="assets/mantra_icon.png" alt="Mantra Chanting App Icon" class="app-icon" />
-                        <div>
-                            <h2 class="app-meta-title">Mantra Chanting: Japa Mala</h2>
-                            <span class="app-platform-badge accent-gold">iOS · watchOS Companion</span>
-                        </div>
-                    </div>
-                    <p class="card-desc">
-                        Tactile digital prayer beads with physics bead-slide haptics, hands-free multilingual speech recognition across 9 traditions, and phone-free Apple Watch workouts.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <span class="view-label accent-gold">View Project <span>&rarr;</span></span>
-                    <span class="rating-indicator">⭐️⭐️⭐️⭐️⭐️ 4.9 Rating</span>
-                </div>
-            </a>
-
-            <!-- 3. Break Reminder: Step Away -->
+            <!-- Break Reminder: Step Away -->
             <a class="app-card card-half" href="https://themansigoel.github.io/stepaway/">
                 <div>
                     <div class="card-top">
@@ -456,7 +457,55 @@
                 </div>
             </a>
 
-            <!-- 4. Go Phonics: Kids Learn to Read -->
+            <!-- MonitorGlow: External Monitor Brightness -->
+            <a class="app-card card-half" href="https://themansigoel.github.io/monitorglow-web/">
+                <div>
+                    <div class="card-top">
+                        <img src="assets/monitorglow_icon.png" alt="MonitorGlow App Icon" class="app-icon" />
+                        <div>
+                            <h2 class="app-meta-title">MonitorGlow: Display Brightness</h2>
+                            <span class="app-platform-badge accent-gold">macOS Sequoia · Native Menu Bar</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Seamless hardware keyboard brightness control and Sub-Zero optical night dimming down to 1% for Dell, LG, Samsung, and third-party external monitors.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span class="view-label accent-gold">View Project <span>&rarr;</span></span>
+                    <span class="rating-indicator">⭐️⭐️⭐️⭐️⭐️ 5.0 Rating</span>
+                </div>
+            </a>
+        </section>
+
+        <!-- 2. iOS & iPadOS Category -->
+        <div class="category-header">
+            <span class="category-badge accent-green">📱 iOS & iPadOS</span>
+            <h2 class="category-title">Focus & Early Learning</h2>
+            <div class="category-divider"></div>
+        </div>
+        <section class="portfolio-grid">
+            <!-- Featured Flagship: GrowFocus -->
+            <a class="app-card card-featured" href="https://themansigoel.github.io/grow-focus-web/">
+                <div>
+                    <div class="card-top">
+                        <img src="assets/growfocus_icon.png" alt="Focus Timer: GrowFocus App Icon" class="app-icon" />
+                        <div>
+                            <h2 class="app-meta-title">Focus Timer: GrowFocus</h2>
+                            <span class="app-platform-badge accent-green">iOS 17+ · Apple Health · SwiftData</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Gamified 3D botanical sanctuary and cognitive focus gym for deep work and ADHD brains. Features 10 clinical attention game rooms, anti-wilt Pomodoro stakes, and native Apple Health Mindful Sessions logging.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span class="view-label accent-green">Explore Experience <span>&rarr;</span></span>
+                    <span class="rating-indicator">⭐️⭐️⭐️⭐️⭐️ 5.0 Rating</span>
+                </div>
+            </a>
+
+            <!-- Go Phonics: Kids Learn to Read -->
             <a class="app-card card-half" href="https://themansigoel.github.io/go-phonics/">
                 <div>
                     <div class="card-top">
@@ -476,7 +525,7 @@
                 </div>
             </a>
 
-            <!-- 5. Kiddo Puzzle: Learning Game -->
+            <!-- Kiddo Puzzle: Learning Game -->
             <a class="app-card card-half" href="https://themansigoel.github.io/kiddo-puzzle/">
                 <div>
                     <div class="card-top">
@@ -495,27 +544,34 @@
                     <span class="rating-indicator">⭐️⭐️⭐️⭐️⭐️ 5.0 Rating</span>
                 </div>
             </a>
+        </section>
 
-            <!-- 6. MonitorGlow: External Monitor Brightness -->
-            <a class="app-card card-half" href="https://themansigoel.github.io/monitorglow-web/">
+        <!-- 3. Apple Watch & Mindfulness Category -->
+        <div class="category-header">
+            <span class="category-badge accent-gold">⌚ Apple Watch</span>
+            <h2 class="category-title">Mindfulness & Habit Formation</h2>
+            <div class="category-divider"></div>
+        </div>
+        <section class="portfolio-grid">
+            <!-- Mantra Chanting: Japa Mala -->
+            <a class="app-card card-half" href="https://themansigoel.github.io/mantra-chanting-web/">
                 <div>
                     <div class="card-top">
-                        <img src="assets/monitorglow_icon.png" alt="MonitorGlow App Icon" class="app-icon" />
+                        <img src="assets/mantra_icon.png" alt="Mantra Chanting App Icon" class="app-icon" />
                         <div>
-                            <h2 class="app-meta-title">MonitorGlow: Display Brightness</h2>
-                            <span class="app-platform-badge accent-gold">macOS Sequoia · Native Menu Bar</span>
+                            <h2 class="app-meta-title">Mantra Chanting: Japa Mala</h2>
+                            <span class="app-platform-badge accent-gold">watchOS · iOS Companion</span>
                         </div>
                     </div>
                     <p class="card-desc">
-                        Seamless hardware keyboard brightness control and Sub-Zero optical night dimming down to 1% for Dell, LG, Samsung, and third-party external monitors.
+                        Tactile digital prayer beads with physics bead-slide haptics, hands-free multilingual speech recognition across 9 traditions, and phone-free Apple Watch workouts.
                     </p>
                 </div>
                 <div class="card-footer">
                     <span class="view-label accent-gold">View Project <span>&rarr;</span></span>
-                    <span class="rating-indicator">⭐️⭐️⭐️⭐️⭐️ 5.0 Rating</span>
+                    <span class="rating-indicator">⭐️⭐️⭐️⭐️⭐️ 4.9 Rating</span>
                 </div>
             </a>
-
         </section>
     </main>
 
