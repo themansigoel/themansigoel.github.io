@@ -28,5 +28,11 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Sitemap Index (references all portfolio sub-sitemaps)
+# Sitemap Index & Direct Sub-Sitemaps
 Sitemap: https://themansigoel.github.io/sitemap.xml
+Sitemap: https://themansigoel.github.io/stepaway/sitemap.xml
+Sitemap: https://themansigoel.github.io/mantra-chanting-web/sitemap.xml
+Sitemap: https://themansigoel.github.io/go-phonics/sitemap.xml
+Sitemap: https://themansigoel.github.io/kiddo-puzzle/sitemap.xml
+Sitemap: https://themansigoel.github.io/grow-focus-web/sitemap.xml
+Sitemap: https://themansigoel.github.io/monitorglow-web/sitemap.xml
