@@ -1,5 +1,8 @@
 # Robots.txt — Search Engine & Generative AI Crawler Directives
 # Root domain: https://themansigoel.github.io/
+User-agent: Google-adstxt
+Disallow:
+
 User-agent: *
 Allow: /
 
