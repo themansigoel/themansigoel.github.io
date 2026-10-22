@@ -1,0 +1,16 @@
+# Sunshine Studios
+
+Apps by Mansi Agarwal for focus, learning, mindfulness, desktop comfort and puzzle play. Each product has its own access model and privacy practices; the portfolio is not uniformly ad-free or analytics-free.
+
+## Apps available on the App Store
+- [Step Away](https://themansigoel.github.io/stepaway/): Mac break reminders and meeting-aware pauses.
+- [MonitorGlow](https://themansigoel.github.io/monitorglow-web/): software dimming for Mac external displays; three-day trial and Lifetime Pro.
+- [GrowFocus](https://themansigoel.github.io/grow-focus-web/): Pomodoro sessions, a growing garden and attention games.
+- [Go Phonics](https://themansigoel.github.io/go-phonics/): phonics and early reading activities.
+- [Kiddo Puzzle](https://themansigoel.github.io/kiddo-puzzle/): ad-free shape matching and themed puzzles.
+- [Mantra Chanting](https://themansigoel.github.io/mantra-chanting-web/): digital japa mala for iPhone and Apple Watch.
+
+## Coming soon
+- [Traffic Rescue](https://themansigoel.github.io/traffic-rescue-web/): 64 car puzzles across five worlds. Version 1.0 is waiting for App Review, not yet available to download.
+
+[Contact](mailto:themansigoel@gmail.com). Use the product privacy and support pages for current details. No ratings, download totals or ranking guarantees are supplied here.

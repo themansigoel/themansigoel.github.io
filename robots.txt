@@ -39,3 +39,4 @@ Sitemap: https://themansigoel.github.io/go-phonics/sitemap.xml
 Sitemap: https://themansigoel.github.io/kiddo-puzzle/sitemap.xml
 Sitemap: https://themansigoel.github.io/grow-focus-web/sitemap.xml
 Sitemap: https://themansigoel.github.io/monitorglow-web/sitemap.xml
+Sitemap: https://themansigoel.github.io/traffic-rescue-web/sitemap.xml
