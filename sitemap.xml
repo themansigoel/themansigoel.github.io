@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://themansigoel.github.io/root-pages.xml</loc>
+    <lastmod>2026-10-28</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://themansigoel.github.io/grow-focus-web/sitemap.xml</loc>
@@ -13,7 +14,7 @@
   </sitemap>
   <sitemap>
     <loc>https://themansigoel.github.io/mantra-chanting-web/sitemap.xml</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://themansigoel.github.io/go-phonics/sitemap.xml</loc>
@@ -27,5 +28,8 @@
     <loc>https://themansigoel.github.io/monitorglow-web/sitemap.xml</loc>
     <lastmod>2026-10-22</lastmod>
   </sitemap>
-  <sitemap><loc>https://themansigoel.github.io/traffic-rescue-web/sitemap.xml</loc><lastmod>2026-10-22</lastmod></sitemap>
+  <sitemap>
+    <loc>https://themansigoel.github.io/traffic-rescue-web/sitemap.xml</loc>
+    <lastmod>2026-10-22</lastmod>
+  </sitemap>
 </sitemapindex>
