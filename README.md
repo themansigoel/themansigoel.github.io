@@ -7,3 +7,5 @@ Live: https://themansigoel.github.io/
 The separate therahulgoel.github.io portfolio was not modified.
 
 Checks: local asset/anchor validation, structured JSON and sitemap XML parsing, platform filter (Android shows exactly one edition; All shows eight), required form fields and desktop/mobile layouts verified. FormSubmit delivery not tested; no support message sent. Existing app-ads.txt unchanged.
+
+Readability follow-up: increased body/card/form/navigation typography; form inputs use 16px, with responsive wrapping retained.
